@@ -1,0 +1,20 @@
+# 有益阅读（eread）服务端 Docker 部署
+# 镜像公开，无需 docker login 即可拉取
+
+services:
+  eread:
+    image: ghcr.io/qiuyuebaijxw/ebook-go:latest
+    container_name: eread
+    restart: unless-stopped
+    ports:
+      - "9020:9020"
+    environment:
+      - TZ=Asia/Shanghai
+      # 管理员 admin 的密码（首次登录用它，之后可在网页“我的”→“用户管理”里加人、改密码）
+      - EREAD_PASSWORD=请改成你自己的密码
+      - TRIM_DATA_ACCESSIBLE_PATHS=/books
+    volumes:
+      # 数据目录：账号、阅读记录、文章、RSS
+      - ./data:/data
+      # 书库：改成你自己的书所在目录；必须读写挂载，手机/网页上传和书城下载都直接写书库
+      - /你的书库:/books
