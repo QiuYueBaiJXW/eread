@@ -10,7 +10,15 @@ NAS 私人电子书库，手机和网页都能读。
 
 ## 部署方式
 
-### Docker（推荐，任何 NAS / 服务器 / 云主机都能用）
+### 飞牛 fnOS（FPK）
+
+- 在飞牛应用商店内搜索有益阅读，下载安装。
+- 仅支持 ARM64 机型；x86 机型请用 Docker 版。
+- 安装后在飞牛桌面打开，或访问 `https://你的域名/app/eread`，用飞牛账号登录，无需另外设密码。
+
+或在 [Releases](https://github.com/QiuYueBaiJXW/eread/releases) 里下载 `eread-3.2.5-arm64.fpk`，飞牛应用中心 → 手动安装 → 上传安装。
+
+### Docker（任何 NAS / 服务器 / 云主机都能用）
 
 镜像：[`ghcr.io/qiuyuebaijxw/ebook-go`](https://github.com/users/QiuYueBaiJXW/packages/container/package/ebook-go)（公开，无需登录即可拉取）
 
@@ -36,13 +44,7 @@ docker compose up -d
 - 书库目录必须读写挂载：上传和书城下载都直接写书库根目录。
 - 数据在 `./data`（账号、阅读记录、文章、RSS），备份它即可。
 
-### 飞牛 fnOS（FPK）
 
-- 在飞牛应用商店内搜索有益阅读，下载安装。
-- 在 [Releases](https://github.com/QiuYueBaiJXW/eread/releases) 里下载 `eread-3.2.5-arm64.fpk`，飞牛应用中心 → 手动安装 → 上传安装。
-
-- 仅支持 ARM64 机型；x86 机型请用 Docker 版。
-- 安装后在飞牛桌面打开，或访问 `https://你的域名/app/eread`，用飞牛账号登录，无需另外设密码。
 
 ### iOS 客户端
 
