@@ -38,16 +38,17 @@ docker compose up -d
 
 ### 飞牛 fnOS（FPK）
 
-在 [Releases](https://github.com/QiuYueBaiJXW/eread/releases) 里下载 `eread-3.2.5-arm64.fpk`，飞牛应用中心 → 手动安装 → 上传安装。
+- 在飞牛应用商店内搜索有益阅读，下载安装。
+- 在 [Releases](https://github.com/QiuYueBaiJXW/eread/releases) 里下载 `eread-3.2.5-arm64.fpk`，飞牛应用中心 → 手动安装 → 上传安装。
 
-- 仅支持 ARM64 机型（如网心云 OES Plus / S922X 等）；x86 机型请用 Docker 版。
+- 仅支持 ARM64 机型；x86 机型请用 Docker 版。
 - 安装后在飞牛桌面打开，或访问 `https://你的域名/app/eread`，用飞牛账号登录，无需另外设密码。
 
 ### iOS 客户端
 
-原生客户端即将上架 App Store，敬请期待。
+原生客户端已上架外区 App Store，国区App store暂不考虑上架。
 
 ## 说明
 
-- 服务端免费；iOS 客户端后续上架后收费（买断制）。
+- 服务端免费；iOS 客户端基础功能免费，会员功能收费。
 - 本仓库仅为分发页，不含源码。
